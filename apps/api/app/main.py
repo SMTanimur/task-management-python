@@ -27,9 +27,9 @@ from .core.logger import logger
 async def lifespan(app: FastAPI) -> AsyncGenerator: 
      # FastAPI
     try:
-        logger.info('❕FastAPI успешно запущен.')
+        logger.info('❕Task management for app: %s' % app)
     except Exception as e:
-        logger.error(f'❌ FastAPI ошибка: {e}')
+        logger.error(f'❌ Fast: {e}')
 
     yield
 
@@ -78,4 +78,4 @@ app.add_middleware(
 
 def start():
     """ Alhumdullilah, Launched with 'poetry run start' at root level """
-    uvicorn.run("app.main:app", host="localhost", port=8888, reload=True)
+    uvicorn.run("app.main:app", host="localhost", port=8080, reload=True)
