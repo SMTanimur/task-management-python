@@ -6,6 +6,8 @@ import { useTheme } from "next-themes";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components";
 import { useThemeContext } from "@/context";
 import { cn } from "@/lib";
+import { ThemeColors } from "@/types";
+
 
 
 const availableThemeColors = [
