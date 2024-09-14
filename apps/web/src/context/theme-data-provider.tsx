@@ -1,21 +1,14 @@
 "use client";
-import setGlobalColorTheme from "@/lib/theme-colors";
+import { setGlobalColorTheme } from "@/lib";
 import { useTheme } from "next-themes";
 import { ThemeProviderProps } from "next-themes/dist/types";
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext<ThemeColorStateParams>(
   {} as ThemeColorStateParams,
 );
 
-export  function ThemeDataProvider({
-  children,
-}: ThemeProviderProps) {
+export function ThemeDataProvider({ children }: ThemeProviderProps) {
   const getSavedThemeColor = () => {
     try {
       return (localStorage.getItem("themeColor") as ThemeColors) || "Zinc";
