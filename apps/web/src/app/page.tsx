@@ -1,4 +1,4 @@
-import { Button, ThemeColorToggle, ThemeModeToggle } from "@/components";
+import { ThemeColorToggle, ThemeModeToggle } from "@/components";
 
 
 export default function Home() {
