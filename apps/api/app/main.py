@@ -14,7 +14,7 @@ from typing import AsyncGenerator
 from .core.logger import logger
 
 
-# Routers depends
+
 # from api.routers.auth.router import router as router_auth
 # from api.routers.blog.router import router as router_blog
 # from api.routers.custom.router import router as router_custom
